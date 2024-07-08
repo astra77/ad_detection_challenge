@@ -6,5 +6,5 @@ jobs:
     steps:
        - name: Hello world action
          with: 
-           SUPER_SECRET: ${{ secrets.mysecret}}
+           SUPER_SECRET: ${{ secrets.mysecret }}
          run: echo "And the secret is $SUPER_SECRET"  
