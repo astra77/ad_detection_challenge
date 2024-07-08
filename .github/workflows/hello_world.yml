@@ -12,7 +12,7 @@ jobs:
        - name: Encrypt pages with PageCrypt
          run: |
           npm i -D pagecrypt
-          sudo npx pagecrypt "_site/index.html" "$SUPER_SECRET"
+          sudo npx pagecrypt "_site/index.html" "_site/index.html" "$SUPER_SECRET"
           
       # End encryption
   
