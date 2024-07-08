@@ -7,4 +7,12 @@ jobs:
        - name: Hello world action
          env: 
            SUPER_SECRET: ${{ secrets.mysecret }}
-         run: echo "And the secret is $SUPER_SECRET"  
+         run: echo "And the secret is $SUPER_SECRET" 
+
+       - name: Encrypt pages with PageCrypt
+         run: |
+          npm i -D pagecrypt
+          sudo npx pagecrypt "_site/index.html" "$SUPER_SECRET"
+          
+      # End encryption
+  
