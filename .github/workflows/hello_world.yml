@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
        - name: Hello world action
-         with: 
+         env: 
            SUPER_SECRET: ${{ secrets.mysecret }}
-       - run: echo "And the secret is $SUPER_SECRET"  
+         run: echo "And the secret is $SUPER_SECRET"  
