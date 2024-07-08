@@ -1,0 +1,10 @@
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  test-secrets:
+    runs-on: ubuntu-latest
+steps:
+  - name: Hello world action
+    env: # Or as an environment variable
+      super_secret: ${{ secrets.PAGE_CR }}
+    run: echo "Hello world!";  
