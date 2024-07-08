@@ -6,5 +6,5 @@ jobs:
     steps:
        - name: Hello world action
          env: 
-           super_secret: ${{ secrets.PAGE_CR }}
+           super_secret: ${{ secrets.secret }}
          run: echo "And the secret is $super_secret"  
