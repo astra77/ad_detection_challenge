@@ -7,4 +7,4 @@ jobs:
        - name: Hello world action
          with: 
            SUPER_SECRET: ${{ secrets.mysecret }}
-           run: echo "And the secret is $SUPER_SECRET"  
+       - run: echo "And the secret is $SUPER_SECRET"  
