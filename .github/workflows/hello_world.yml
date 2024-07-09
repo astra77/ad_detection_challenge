@@ -8,11 +8,17 @@ jobs:
          env: 
            SUPER_SECRET: ${{ secrets.mysecret }}
          run: echo "And the secret is $SUPER_SECRET" 
-
+       #checkout
+       - uses: actions/checkout@v4
+         with:
+           sparse-checkout: |
+             index.html
+           sparse-checkout-cone-mode: false
        - name: Encrypt pages with PageCrypt
          run: |
           npm i -D pagecrypt
-          sudo npx pagecrypt "_site/index.html" "_site/index.html" "$SUPER_SECRET"
-          
-      # End encryption
+          sudo npx pagecrypt "index.html" "index.html" "$SUPER_SECRET"
+          # End encryption
+       - name: Upload artifact
+         uses: actions/upload-pages-artifact@v1
   
