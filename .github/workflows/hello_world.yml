@@ -19,5 +19,7 @@ jobs:
           npm i -D pagecrypt
           sudo npx pagecrypt index.html index.html ${{ secrets.mysecret }}
           # End encryption
+       - name: Upload artifact
+         uses: actions/upload-pages-artifact@v1   
 
   
