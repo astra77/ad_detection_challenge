@@ -20,6 +20,8 @@ jobs:
           sudo npx pagecrypt index.html index.html ${{ secrets.mysecret }}
           # End encryption
        - name: Upload artifact
-         uses: actions/upload-pages-artifact@v1   
+         uses: actions/upload-pages-artifact@v1
+         with:
+          path: $GITHUB_WORKSPACE/build
 
   
