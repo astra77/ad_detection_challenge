@@ -21,8 +21,6 @@ jobs:
        #checkout
        - uses: actions/checkout@v4
          with:
-           repository: astra77/gold-winner
-           token: ${{ secrets.checkout }}
            sparse-checkout: |
              index.html
            sparse-checkout-cone-mode: false
